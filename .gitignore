@@ -1,0 +1,8 @@
+.htaccess
+build
+.DS_Store
+vendor
+node_modules
+config.js
+uploads
+.idea

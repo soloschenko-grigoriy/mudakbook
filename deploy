@@ -1,0 +1,7 @@
+mkdir /var/www/mudakbook/build/assets
+mkdir /var/www/mudakbook/build/scripts
+put -rp ./build/assets /var/www/mudakbook/build
+put -rp ./build/scripts /var/www/mudakbook/build
+
+
+
