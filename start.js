@@ -75,7 +75,7 @@ fs.readdirSync(__dirname + '/server/models').forEach(function (file) {
 });
 
 //Bootstrap routes
-fs.readdirSync('./server/routes').forEach(function (file) {
+fs.readdirSync(__dirname + '/server/routes').forEach(function (file) {
   if (~file.indexOf('.js')) {
     require('./server/routes/' + file)(app);
   }
