@@ -178,6 +178,7 @@ module.exports = function(grunt) {
         '<%= appConfig.app %>/scripts/{,*/}*.js',
         '<%= appConfig.server %>/{,*/}*.js',
         '!<%= appConfig.app %>/scripts/vendor/*',
+        '!<%= appConfig.app %>/scripts/plugins/*',
         'test/specs/{,*/}*.js'
       ]
     },
