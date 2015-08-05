@@ -8,12 +8,16 @@ define([
   'communicator',
   'dao',
   'views/layout/index',
+  'views/layout/complain',
+  'views/layout/search',
   'views/layout/e404'
 ], function(
     Backbone,
     Communicator,
     DAO,
     IndexLayout,
+    ComplainLayout,
+    SearchLayout,
     E404Layout
 ){
 
@@ -25,7 +29,10 @@ define([
      * @type {Object} Routes list
      */
     routes: {
-      ''   : 'index',
+      ''          : 'index',
+      'complain'  : 'complain',
+
+      'search/:value' : 'search',
 
       '*notFound': 'e404'
     },
@@ -54,6 +61,34 @@ define([
       this.setLocale();
       Communicator.reqres.request('RM:getRegion', 'container').show(new IndexLayout());
       Communicator.mediator.trigger('ROUTER:CHANGED', 'index');
+
+      return this;
+    },
+
+    /**
+     * Index route
+     *
+     * @return {Backbone.Router}
+     */
+    complain: function()
+    {
+      this.setLocale();
+      Communicator.reqres.request('RM:getRegion', 'container').show(new ComplainLayout());
+      Communicator.mediator.trigger('ROUTER:CHANGED', 'complain');
+
+      return this;
+    },
+
+    /**
+     * Index route
+     *
+     * @return {Backbone.Router}
+     */
+    search: function(value)
+    {
+      this.setLocale();
+      Communicator.reqres.request('RM:getRegion', 'container').show(new SearchLayout({ value: value}));
+      Communicator.mediator.trigger('ROUTER:CHANGED', 'search');
 
       return this;
     },

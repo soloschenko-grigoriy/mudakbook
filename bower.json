@@ -13,7 +13,8 @@
     "require-handlebars-plugin": "~0.4.0",
     "backbone.wreqr": "~0.2.0",
     "backbone.babysitter": "~0.0.6",
-    "backbone-relational": "latest"
+    "backbone-relational": "latest",
+    "wow":"latest"
   },
   "devDependencies": {
     "jasmine": "^2.1.1",

@@ -1,0 +1,72 @@
+<section id="head">
+  <header>
+    <!-- insert header here -->
+  </header>
+</section>
+
+<section id="complaint">
+  <div class="container" >
+    <div class="row complaintForm">
+      <div class="col-md-12">
+        <h2>Создание жалобы</h2>
+        <h4>Здесь Вам неободимо указать координаты мудака.</h4>
+      </div>
+      <div class="col-md-8">
+        <form class="form-inline">
+          <div class="row">
+            <div class="form-group col-md-12"> <!-- has-error -->
+              <input type="text" id="name" placeholder="Введите название компании или ФИО мудака" class="form-control input-lg" />
+            </div>
+
+            <div class="form-group col-md-12">
+              <input type="text" id="email" placeholder="Введите email мудака" class="form-control input-lg" >
+            </div>
+
+            <div class="form-group col-md-12">
+              <input type="text" id="phone" placeholder="Введите телефон мудака (включая международный код)" class="form-control input-lg">
+            </div>
+
+            <div class="form-group col-md-12">
+              <input type="text" id="website" placeholder="Введите адрес сайта мудака" class="form-control input-lg">
+            </div>
+
+            <div class="form-group col-md-12">
+              <input type="text" id="card" placeholder="Введите номер банковской карты мудака" class="form-control input-lg">
+            </div>
+
+            <div class="form-group col-md-12">
+              <textarea id="description" class="form-control input-lg" placeholder="Опишите суть жалобы. За что именно Вы хотите наказать мудака?"></textarea>
+            </div>
+
+            <div class="form-group col-md-12">
+              <button id="submit" class="btn btn-primary">Сохранить</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-4" style="padding-top:3px">
+        <p>Будьте внимательны - неправильно введенная информация не только поможет мудаку избежать заслуженного наказания, но и может навлечь беду на невиновного.</p>
+        <p>Старайтесь указать как можно больше информации о мудаке. Это увеличивает шансы справедливого возмездия.</p>
+        <p>"Суть жалобы" - очень важное поле. Именно благодаря ему пользователи узнают, в чем виноват этот мудак.</p>
+
+        <hr class="error-hr" />
+
+        <p class="error-help error-empty"><b>Ошибка.</b> Необходимо указать хоть какую-нибудь информацию о мудаке (имя или email или телефон или сайт)</p>
+        <p class="error-help error-empty-desc"><b>Ошибка.</b> Необходимо указать суть жалобы.</p>
+        <p class="error-help error-email"><b>Ошибка.</b> Введеный Вами email невалиден. Пример корректного email: support@mudakbook.com</p>
+        <p class="error-help error-phone"><b>Ошибка.</b> Введеный Вами номер телефона невалиден. Пример корректного номера:<br/> +38 044 555 55 55</p>
+        <p class="error-help error-webidte"><b>Ошибка.</b> Введеный Вами адрес сайта невалиден. Пример корректного адреса:<br/> mudakbook.com</p>
+        <p class="error-help error-card"><b>Ошибка.</b> Введеный Вами номер карты невалиден. Пример корректного номера:<br/> 1111 1111 1111 1111</p>
+        <p class="error-help error-server"><b>Ошибка.</b> Извините, произошла ошибка сохранения жалобы. Попробуйте, пожалуйста, позже. </p>
+      </div>
+    </div>
+
+    <div class="row complaintSuccess">
+      <div class="col-md-12">
+        <h2>Жалоба успешно создана</h2>
+        <h4>Вот и все! Теперь данные мудака находятся в нашей базе!</h4>
+      </div>
+    </div>
+  </div>
+</section>

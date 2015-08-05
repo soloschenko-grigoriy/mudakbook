@@ -5,6 +5,7 @@
  */
 define([
   'jquery',
+  'wow',
   'backbone',
   'bootstrap',
   'underscore',
@@ -17,6 +18,7 @@ define([
   'i18nprecompile',
   'json2',
   'hbs'
-], function()
+], function(jQuery, wow)
 {
+  'use strict';
 });

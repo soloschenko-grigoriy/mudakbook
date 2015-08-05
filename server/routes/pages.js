@@ -9,4 +9,12 @@ module.exports = function(app){
     controller.show(req, res, next);
   });
 
+  app.get('/complain',  function(req, res, next){
+    controller.show(req, res, next);
+  });
+
+  app.get('/search/:value',  function(req, res, next){
+    controller.show(req, res, next);
+  });
+
 };

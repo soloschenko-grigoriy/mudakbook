@@ -1,5 +1,5 @@
 /**
- * @class Index page layout
+ * @class     Search page layout
  *
  * @author    Soloschenko G. soloschenko@gmail.com
  *
@@ -7,7 +7,7 @@
 define([
   'backbone',
   'views/layout/header',
-  'hbs!tmpl/layout/index'
+  'hbs!tmpl/layout/search'
 ], function(
   Backbone,
   Header,
@@ -30,7 +30,7 @@ define([
      *
      * @type {String}
      */
-    className: 'index-container',
+    className: 'search-container',
 
     /**
      * List of avaible regions
@@ -38,7 +38,7 @@ define([
      * @type {Object}
      */
     regions: {
-      'header':'header'
+       'header':'header'
     },
 
     /**

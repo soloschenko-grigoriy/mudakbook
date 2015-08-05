@@ -21,6 +21,9 @@ require.config({
       deps: [
         'jquery'
       ]
+    },
+    wow: {
+      deps: ['jquery']
     }
   },
   paths: {
@@ -45,7 +48,9 @@ require.config({
     'dao'          : 'controllers/dao',
     'regionManager': 'controllers/regionManager',
     'router'       : 'controllers/router',
-    'cookie'       : 'controllers/cookie'
+    'cookie'       : 'controllers/cookie',
+
+    wow: 'vendor/wow/dist/wow.min'
   },
 
   hbs: {

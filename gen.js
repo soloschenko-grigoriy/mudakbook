@@ -32,4 +32,33 @@ fs.readFile('./server/routes/_EXAMPLE', 'utf8', function (err,data) {
   });
 });
 
+console.log('Creating client model');
+fs.readFile('./public/scripts/models/_EXAMPLE', 'utf8', function (err,data) {
+  if (err) {
+    return console.log(err);
+  }
+  var result = data.replace(/%_MODEL_NAME_%/g, moduleName.charAt(0).toUpperCase() + moduleName.slice(1));
+
+  result = result.replace(/%_ROUTE_%/g, moduleName.toLowerCase() + 's');
+
+  fs.writeFile('./public/scripts/models/'+moduleName+'.js', result, 'utf8', function (err) {
+    if (err) return console.log(err);
+  });
+});
+
+console.log('Creating client collection');
+fs.readFile('./public/scripts/collections/_EXAMPLE', 'utf8', function (err,data) {
+  if (err) {
+    return console.log(err);
+  }
+  var result = data.replace(/%_MODEL_NAME_%/g, moduleName.toLowerCase());
+
+  result = result.replace(/%_ROUTE_%/g, moduleName.toLowerCase() + 's');
+  result = result.replace(/%_COLLECTION_NAME_%/g, moduleName.charAt(0).toUpperCase() + moduleName.slice(1) + 's');
+
+  fs.writeFile('./public/scripts/collections/'+moduleName + 's' + '.js', result, 'utf8', function (err) {
+    if (err) return console.log(err);
+  });
+});
+
 console.log('Module "'+moduleName + '" successfully created');

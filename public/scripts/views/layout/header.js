@@ -1,16 +1,14 @@
 /**
- * @class Index page layout
+ * @class     Header layout
  *
  * @author    Soloschenko G. soloschenko@gmail.com
  *
  */
 define([
   'backbone',
-  'views/layout/header',
-  'hbs!tmpl/layout/index'
+  'hbs!tmpl/layout/header'
 ], function(
   Backbone,
-  Header,
   Tmpl
 ){
 
@@ -30,16 +28,21 @@ define([
      *
      * @type {String}
      */
-    className: 'index-container',
+    className: 'navbar navbar-default',
+
+    /**
+     * Tag name of view container
+     *
+     * @type {String}
+     */
+    tagName: 'nav',
 
     /**
      * List of avaible regions
      *
      * @type {Object}
      */
-    regions: {
-      'header':'header'
-    },
+    regions: {},
 
     /**
      * DOM events on this view
@@ -55,7 +58,7 @@ define([
      */
     onRender: function ()
     {
-      this.header.show(new Header());
+      this.$el.prop('role', 'navigation');
 
       return this;
     }

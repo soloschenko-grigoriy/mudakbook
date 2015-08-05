@@ -31,7 +31,14 @@ define([
       };
     });
 
-    Communicator.reqres.request('RM:addRegion', 'container',  'body');
+    Communicator.reqres.request('RM:addRegion', 'container',  '#main-container');
+
+    $('.doc-loader').fadeOut('slow');
+    new WOW({
+      animateClass: 'animated',
+      mobile:       false,
+      offset:       70
+    }).init();
 
     $('body').on('click', 'a:not([data-bypass])', function(e){
       var href = $(this).prop('href'),
